@@ -1,6 +1,5 @@
 from db.run_sql import run_sql
 from models.supplier import Supplier
-from models.product import Product
 
 def save_supplier(supplier):
     sql = "INSERT INTO suppliers (name) VALUES (%s) RETURNING *"
@@ -29,3 +28,12 @@ def select_supplier(id):
     if result is not None:
         supplier = Supplier(result['name'], result['id'] )
     return supplier
+
+def delete_all_suppliers():
+    sql = "DELETE FROM suppliers"
+    run_sql(sql)
+
+def delete_supplier(id):
+    sql = "DELETE FROM suppliers WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)

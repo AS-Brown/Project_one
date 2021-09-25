@@ -6,6 +6,9 @@ from models.supplier import Supplier
 import repositories.product_repository as product_repository
 import repositories.supplier_repository as supplier_repository
 
+product_repository.delete_all_products()
+supplier_repository.delete_all_suppliers()
+
 supplier_1 = Supplier("BI SMOLL")
 supplier_repository.save_supplier(supplier_1)
 

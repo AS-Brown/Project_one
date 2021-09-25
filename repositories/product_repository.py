@@ -32,3 +32,12 @@ def select_product(id):
         supplier = supplier_repository.select_supplier(result['supplier_id'])
         product = Product(result['title'], result['genre'], supplier, result['id'] )
     return product
+
+def delete_all_products():
+    sql = "DELETE FROM products"
+    run_sql(sql)
+
+def delete_product(id):
+    sql = "DELETE FROM products WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
