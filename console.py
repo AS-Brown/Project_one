@@ -15,10 +15,4 @@ supplier_repository.save_supplier(supplier_1)
 product_1 = Product("IRN BRU", "2 Litre", 1.00, 2.00, 27, "Ambient", supplier_1)
 product_repository.save_product(product_1)
 
-
-
-
-
-
-
 pdb.set_trace()

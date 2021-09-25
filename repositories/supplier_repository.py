@@ -37,3 +37,8 @@ def delete_supplier(id):
     sql = "DELETE FROM suppliers WHERE id = %s"
     values = [id]
     run_sql(sql, values)
+
+def update_supplier(supplier):
+    sql = "UPDATE suppliers SET (name) = (%s) WHERE id = %s"
+    values = [supplier.name, supplier.id]
+    run_sql(sql, values)
