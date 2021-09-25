@@ -2,8 +2,8 @@ from db.run_sql import run_sql
 from models.supplier import Supplier
 
 def save_supplier(supplier):
-    sql = "INSERT INTO suppliers (name) VALUES (%s) RETURNING *"
-    values = [supplier.name]
+    sql = "INSERT INTO suppliers (name, location) VALUES (%s, %s) RETURNING *"
+    values = [supplier.name, supplier.location]
     results = run_sql(sql, values)
     id = results[0]['id']
     supplier.id = id
@@ -15,7 +15,7 @@ def select_all_suppliers():
     results = run_sql(sql)
 
     for result in results:
-        supplier = Supplier(result['name'], result['id'] )
+        supplier = Supplier(result['name'], result['location'], result['id'] )
         suppliers.append(supplier)
     return suppliers
 
@@ -26,7 +26,7 @@ def select_supplier(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        supplier = Supplier(result['name'], result['id'] )
+        supplier = Supplier(result['name'], result['location'], result['id'] )
     return supplier
 
 def delete_all_suppliers():
@@ -39,6 +39,6 @@ def delete_supplier(id):
     run_sql(sql, values)
 
 def update_supplier(supplier):
-    sql = "UPDATE suppliers SET (name) = (%s) WHERE id = %s"
-    values = [supplier.name, supplier.id]
+    sql = "UPDATE suppliers SET (name, location) = (%s, %s) WHERE id = %s"
+    values = [supplier.name, supplier.location, supplier.id]
     run_sql(sql, values)
