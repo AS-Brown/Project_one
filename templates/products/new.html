@@ -2,32 +2,32 @@
 
 {% block content %}
 
-<div>
+<div class='box'>
     <form action="/products" method="POST">
-        <label for="name">Product name: </label>
-        <input type="text" id="name" name="name" placeholder="name" required autofocus>
+        <label for="name">Product name: </label><br>
+        <input type="text" id="name" name="name" placeholder="name" required autofocus><br>
 
-        <label for="description">Product description: </label>
-        <input type="text" id="description" name="description" placeholder="description" required>
+        <label for="description">Product description: </label><br>
+        <input type="text" id="description" name="description" placeholder="description" required><br>
 
-        <label for="buying_cost">Product buying cost: </label>
-        <input type="number" id="buying_cost" name="buying_cost" placeholder="buying_cost" required>
+        <label for="buying_cost">Product buying cost: </label><br>
+        <input type="number" id="buying_cost" name="buying_cost" placeholder="buying cost" required><br>
 
-        <label for="sell_price">Product sell price: </label>
-        <input type="number" id="sell_price" name="sell_price" placeholder="sell_price" required>
+        <label for="sell_price">Product sell price: </label><br>
+        <input type="number" id="sell_price" name="sell_price" placeholder="sell price" required><br>
 
-        <label for="stock_count">Product stock count: </label>
-        <input type="number" id="stock_count" name="stock_count" placeholder="stock_count" required>
+        <label for="stock_count">Product stock count: </label><br>
+        <input type="number" id="stock_count" name="stock_count" placeholder="stock count" required><br>
 
-        <label for="type_of_product">Type of product: </label>
-        <input type="text" id="type_of_product" name="type_of_product" placeholder="type_of_product" required>
+        <label for="type_of_product">Type of product: </label><br>
+        <input type="text" id="type_of_product" name="type_of_product" placeholder="type of product" required><br>
 
-        <label for="supplier">Product supplier: </label>
+        <label for="supplier">Product supplier: </label><br>
         <select id="supplier" name="supplier_id">
             {% for supplier in suppliers  %}
                 <option value="{{ supplier.id }}">{{ supplier.name }}</option>
             {% endfor %}
-        </select>
+        </select><br>
 
         <button type="submit">Add product</button>       
     </form>
