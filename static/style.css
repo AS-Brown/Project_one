@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90em;
+    margin: 0 auto;
+  }
+
+.box{
+    border-radius: 25px;
+    border: 5px dotted red;
+    background-color: gainsboro;
+    width: 258px;
+    height: auto;
+    display: flex;
+    float:left;
+    line-height: 18px;
+    margin-bottom: 2px;
+    margin-left:6px;
+    flex-direction: column;
+    padding-left: 4px;
+  }
