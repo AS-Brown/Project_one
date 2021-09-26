@@ -15,9 +15,9 @@ def select_all_products():
     sql = "SELECT * FROM products"
     results = run_sql(sql)
 
-    for row in results:
-        supplier = supplier_repository.select_supplier(row['supplier_id'])
-        product = Product(row['title'], row['genre'], supplier, row['id'] )
+    for result in results:
+        supplier = supplier_repository.select_supplier(result['supplier_id'])
+        product = Product(result['name'], result['description'], result['buying_cost'], result['sell_price'], result['stock_count'], result['type_of_product'], supplier, result['id'])
         products.append(product)
     return products
 
@@ -29,7 +29,7 @@ def select_product(id):
 
     if result is not None:
         supplier = supplier_repository.select_supplier(result['supplier_id'])
-        product = Product(result['title'], result['genre'], supplier, result['id'] )
+        product = Product(result['name'], result['description'], result['buying_cost'], result['sell_price'], result['stock_count'], result['type_of_product'], supplier, result['id'])
     return product
 
 def delete_all_products():
