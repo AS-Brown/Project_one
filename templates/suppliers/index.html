@@ -4,7 +4,7 @@
 
 {% for supplier in suppliers %}
     <div class="box">
-        <h1>{{supplier.name}}</h1>
+        <h1><a href="/suppliers/{{supplier.id}}">{{supplier.name}}</a></h1>
         <p>{{supplier.location}}</p>
     </div>
 
