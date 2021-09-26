@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class='box'>
+    <form action="/products/{{ product.id }}" method="POST">
+        <label for="name">Product name: </label><br>
+        <input type="text" id="name" name="name" value="{{ product.name }}" required autofocus><br>
+
+        <label for="description">Product description: </label><br>
+        <input type="text" id="description" name="description" value="{{ product.description }}" required><br>
+
+        <label for="buying_cost">Product buying cost: </label><br>
+        <input type="number" id="buying_cost" name="buying_cost" value="{{ product.buying_cost }}" required><br>
+
+        <label for="sell_price">Product sell price: </label><br>
+        <input type="number" id="sell_price" name="sell_price" value="{{ product.sell_price }}" required><br>
+
+        <label for="stock_count">Product stock count: </label><br>
+        <input type="number" id="stock_count" name="stock_count" value="{{ product.stock_count }}" required><br>
+
+        <label for="type_of_product">Type of product: </label><br>
+        <input type="text" id="type_of_product" name="type_of_product" value="{{ product.type_of_product }}" required><br>
+
+        <label for="supplier">Product supplier: </label><br>
+        <select id="supplier" name="supplier_id">
+            {% for supplier in suppliers  %}
+                <option value="{{ supplier.id }}" {% if product.supplier.id == supplier.id %} selected="selected" {% endif %}></option>>{{ supplier.name }}</option>
+            {% endfor %}
+        </select><br>
+
+        <button type="submit">Update product</button>       
+    </form>
+</div>
+
+{% endblock %}
