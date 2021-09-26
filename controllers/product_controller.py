@@ -28,3 +28,8 @@ def create_product():
     product=Product(name, description, buying_cost, sell_price, stock_count, type_of_product, supplier, id)
     product_repository.save_product(product)
     return redirect('/products')
+
+@product_blueprint.route('/products/<id>', methods=["GET"])
+def show_product(id):
+    product = product_repository.select_product(id)
+    return render_template('products/show.html', product = product)

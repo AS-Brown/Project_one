@@ -2,10 +2,8 @@
 
 {% block content %}
 
-{% for product in products %}
-
     <div class="box">
-        <h1><a href="/products/{{product.id}}">{{product.name}}</a></h1>
+        <h1>{{product.name}}</h1>
         <p>{{product.description}}</p>
         <p>{{product.buying_cost}}</p>
         <p>{{product.sell_price}}</p>
@@ -14,7 +12,4 @@
         <p>{{product.supplier.name}}</p>
     </div>
 
-{% endfor %}   
-
 {% endblock %}
-

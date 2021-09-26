@@ -20,3 +20,8 @@ def create_supplier():
     supplier = Supplier(name, location)
     supplier_repository.save_supplier(supplier)
     return redirect('/suppliers')
+
+@supplier_blueprint.route('/suppliers/<id>', methods=["GET"])
+def show_supplier(id):
+    supplier = supplier_repository.select_supplier(id)
+    return render_template('supplier/show.html', supplier = supplier)
