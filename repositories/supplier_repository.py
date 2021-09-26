@@ -29,6 +29,11 @@ def select_supplier(id):
         supplier = Supplier(result['name'], result['location'], result['id'] )
     return supplier
 
+def update_supplier(supplier):
+    sql = "UPDATE suppliers SET (name, location) = (%s, %s) WHERE id = %s"
+    values = [supplier.name, supplier.location, supplier.id]
+    run_sql(sql, values)    
+
 def delete_all_suppliers():
     sql = "DELETE FROM suppliers"
     run_sql(sql)
@@ -38,7 +43,3 @@ def delete_supplier(id):
     values = [id]
     run_sql(sql, values)
 
-def update_supplier(supplier):
-    sql = "UPDATE suppliers SET (name, location) = (%s, %s) WHERE id = %s"
-    values = [supplier.name, supplier.location, supplier.id]
-    run_sql(sql, values)
