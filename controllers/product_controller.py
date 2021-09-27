@@ -8,7 +8,8 @@ product_blueprint = Blueprint("products", __name__)
 @product_blueprint.route('/products')
 def products():
     products = product_repository.select_all_products()
-    return render_template("/products/index.html", products = products)
+    suppliers = supplier_repository.select_all_suppliers()
+    return render_template("/products/index.html", products = products, suppliers = suppliers)
 
 @product_blueprint.route('/products/new', methods = ['GET'])
 def new_product():
@@ -53,3 +54,9 @@ def update_product(id):
     product=Product(name, description, buying_cost, sell_price, stock_count, type_of_product, supplier, id)
     product_repository.update_product(product)
     return redirect('/products')
+
+@product_blueprint.route('/products/via/<id>', methods=["GET"])
+def product_via_supplier(id):
+    id=id
+    products = product_repository.select_all_products()
+    return render_template("/products/filters.html", products = products, id=id)

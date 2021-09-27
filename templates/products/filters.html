@@ -6,13 +6,13 @@
 <button class="dropbtn">Filter</button>
 <div class="dropdown-content">
     {% for supplier in suppliers %}
-    <a href="/products/via/{{supplier.name}}">{{supplier.name}}</a>
+    <a href="/products/via/{{supplier.id}}">{{supplier.name}}</a>
     {% endfor %}
 </div>
 </div>
 
 {% for product in products %}
-
+{% if product.supplier.name == id %}
     <div class="box">
         <h1><a href="/products/{{product.id}}">{{product.name}}</a></h1>
         <p>{{product.description}}</p>
@@ -27,8 +27,8 @@
             This product is low in stock
         {% endif %}</p>
     </div>
+{% endif %}
 
 {% endfor %}   
 
 {% endblock %}
-

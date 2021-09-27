@@ -9,9 +9,9 @@ import repositories.supplier_repository as supplier_repository
 product_repository.delete_all_products()
 supplier_repository.delete_all_suppliers()
 
-supplier_1 = Supplier("BI SMOLL", "Dundee")
+supplier_1 = Supplier("BI_SMOLL", "Dundee")
 supplier_repository.save_supplier(supplier_1)
-supplier_2 = Supplier("DK WODE", "Aberdeen")
+supplier_2 = Supplier("DK_WODE", "Aberdeen")
 supplier_repository.save_supplier(supplier_2)
 supplier_3 = Supplier("GREENINGS", "Kilmarnock")
 supplier_repository.save_supplier(supplier_3)
