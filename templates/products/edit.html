@@ -25,7 +25,7 @@
         <label for="supplier">Product supplier: </label><br>
         <select id="supplier" name="supplier_id">
             {% for supplier in suppliers  %}
-                <option value="{{ supplier.id }}" {% if product.supplier.id == supplier.id %} selected="selected" {% endif %}></option>>{{ supplier.name }}</option>
+                <option value="{{ supplier.id }}" {% if product.supplier.id == supplier.id %} selected="selected" {% endif %}>{{ supplier.name }}</option>
             {% endfor %}
         </select><br>
 
