@@ -12,6 +12,11 @@
         <p>{{product.stock_count}}</p>
         <p>{{product.type_of_product}}</p>
         <p>{{product.supplier.name}}</p>
+        <p>{% if product.stock_count == 0 %}
+            This product is out of stock
+        {% elif product.stock_count < 10 %}
+            This product is low in stock
+        {% endif %}</p>
     </div>
 
 {% endfor %}   
