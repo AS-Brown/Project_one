@@ -2,6 +2,31 @@ body{
     background-color:gainsboro;
 }
 
+#nav_bar{
+    background-color: darkslateblue;
+    border-radius: 25px;
+    display:flex;
+    margin-left: 20%;
+    margin-right:30%;
+    flex-direction: row;
+    font-family: 'Times New Roman', Times, serif; font-size: 20px; 
+    filter:drop-shadow(0 0 0.75rem black)
+  }
+
+#nav_bar li{
+    margin-left: 2%;
+    margin-right:2%;
+    list-style: none;
+    padding:5px;
+    
+  }
+#nav_bar li a:link {
+    color: red;
+  }
+#nav_bar li a:visited{
+    color:whitesmoke;
+  }
+
 .container{
     display: flex;
     flex-wrap: wrap;
@@ -29,7 +54,6 @@ body{
     padding-left: 4px;
     filter: drop-shadow(0 0 0.75rem grey);
   }
-
 
 /* HERE IS DROPDOWN START */
 

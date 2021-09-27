@@ -8,3 +8,15 @@ class Product:
         self.type_of_product = type_of_product
         self.supplier = supplier
         self.id = id
+    
+    def mark_up(self):
+        amount = self.sell_price - self.buying_cost
+        return amount
+
+    def show_stock(self):
+        if self.stock_count == 0:
+            return "This product is out of stock"
+        if self.stock_count < 10:
+            return "This product is low in stock"
+        else:
+            return ""

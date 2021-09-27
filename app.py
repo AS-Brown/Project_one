@@ -1,5 +1,4 @@
 from flask import Flask, render_template
-
 from controllers.product_controller import product_blueprint
 from controllers.supplier_controller import supplier_blueprint
 
