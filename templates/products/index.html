@@ -1,14 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div id="contents">
 
 <div class="dropdown">
-<button class="dropbtn">Filter</button>
-<div class="dropdown-content">
+    <button class="dropbtn">Filter by manufacturer</button>
+    <div class="dropdown-content">
     {% for supplier in suppliers %}
     <a href="/products/via/{{supplier.name}}">{{supplier.name}}</a>
     {% endfor %}
-</div>
+    </div>
 </div>
 
 {% for product in products %}
@@ -29,6 +30,6 @@
     </div>
 
 {% endfor %}   
-
+</div>
 {% endblock %}
 
