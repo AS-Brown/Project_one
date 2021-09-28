@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-         
+
+<body class="supplier-background">
+
 <div class='box'>
     <form action="/suppliers/{{ supplier.id }}" method="POST">
         <label for="name">Supplier name: </label><br>
@@ -20,3 +22,4 @@
 </div>
 
 {% endblock %}
+</body>

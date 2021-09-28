@@ -1,8 +1,23 @@
 body{
     background-color:gainsboro;
 }
+
+body.home-background{
+  background-image: url(/static/images/Space.jpeg);
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+}
+
 body.product-background{
   background-image: url(/static/images/SHOP_BACKGROUND.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+}
+
+body.supplier-background{
+  background-image: url(/static/images/Warehouse.jpg.webp);
   background-repeat: no-repeat;
   background-attachment: fixed; 
   background-size: 100% 100%;
@@ -68,7 +83,7 @@ body.product-background{
 
 .box{
     border-radius: 25px;
-    background-color: white;
+    background-color: aliceblue;
     width: 25em;
     height: auto;
     display: flex;
@@ -76,8 +91,24 @@ body.product-background{
     margin-bottom: 2%;
     margin-left:2%;
     flex-direction: column;
-    padding-left: 4px;
+    padding-left: 10px;
     filter: drop-shadow(0 0 0.75rem grey);
+  }
+
+.box2{
+  border-radius: 25px;
+  background-color: aliceblue;
+  width: auto;
+  height: auto;
+  display: flex;
+  line-height: 18px;
+  margin-bottom: 2%;
+  margin-left:25em;
+  flex-direction: column;
+  padding:50px;
+  filter: drop-shadow(0 0 0.75rem grey);
+  font-family: 'Times New Roman', Times, serif; font-size: 20px; 
+  text-align: center;
   }
 
 /* HERE IS DROPDOWN START */

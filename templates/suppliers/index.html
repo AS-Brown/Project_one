@@ -2,6 +2,8 @@
 
 {% block content %}
 
+<body class="supplier-background">
+
 {% for supplier in suppliers %}
     <div class="box">
         <h1><a href="/suppliers/{{supplier.id}}">{{supplier.name}}</a></h1>
@@ -14,3 +16,4 @@
 {% endfor %}   
 
 {% endblock %}
+</body>

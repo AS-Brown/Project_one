@@ -2,6 +2,8 @@
 
 {% block content %}
 
+<body class="product-background">
+
 <div class='box'>
     <form action="/products/{{ product.id }}" method="POST">
         <label for="name">Product name: </label><br>
@@ -36,3 +38,5 @@
 </div>
 
 {% endblock %}
+
+</body>
