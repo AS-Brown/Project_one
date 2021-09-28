@@ -25,13 +25,13 @@
 
     <div class="box">
         <h1><a href="/products/{{product.id}}">{{product.name}}</a></h1>
-        <p>Description: {{product.description}}</p>
-        <p>Buying cost: £{{product.buying_cost}}</p>
-        <p>Sell price: £{{product.sell_price}}</p>
-        <p>Quantity in stock: {{product.stock_count}}</p>
-        <p>Type of product: {{product.type_of_product}}</p>
-        <p>Supplier: {{product.supplier.name}}</p>
-        <p>Mark up: £{{product.mark_up()}}</p>
+        <p><b>Description: </b>{{product.description}}</p>
+        <p><b>Buying cost: £</b>{{product.buying_cost}}</p>
+        <p><b>Sell price: </b>£{{product.sell_price}}</p>
+        <p><b>Quantity in stock: </b>{{product.stock_count}}</p>
+        <p><b>Type of product: </b>{{product.type_of_product}}</p>
+        <p><b>Supplier: </b>{{product.supplier.name}}</p>
+        <p><b>Mark up: </b>£{{product.mark_up()}}</p>
         <p>{{product.show_stock()}}</p>
     </div>
 

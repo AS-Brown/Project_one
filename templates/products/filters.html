@@ -2,22 +2,25 @@
 
 {% block content %}
 
+<div class="return">
+
 <h1><a href="/products">Return to all products</a></h1>
+
+</div>
 
 {% for product in products %}
 
 {% if product.supplier.name == id %}
     <div class="box">
         <h1><a href="/products/{{product.id}}">{{product.name}}</a></h1>
-        <p>{{product.description}}</p>
-        <p>{{product.buying_cost}}</p>
-        <p>{{product.sell_price}}</p>
-        <p>{{product.stock_count}}</p>
-        <p>{{product.type_of_product}}</p>
-        <p>{{product.supplier.name}}</p>
-        <p>{{product.mark_up()}}</p>
-        <p>{{product.show_stock()}}</p>
-        
+        <p><b>Description: </b>{{product.description}}</p>
+        <p><b>Buying cost: £</b>{{product.buying_cost}}</p>
+        <p><b>Sell price: </b>£{{product.sell_price}}</p>
+        <p><b>Quantity in stock: </b>{{product.stock_count}}</p>
+        <p><b>Type of product: </b>{{product.type_of_product}}</p>
+        <p><b>Supplier: </b>{{product.supplier.name}}</p>
+        <p><b>Mark up: </b>£{{product.mark_up()}}</p>
+        <p>{{product.show_stock()}}</p>        
     </div>
 {% endif %}
 
@@ -28,13 +31,13 @@
 {% if product.type_of_product == id %}
     <div class="box">
         <h1><a href="/products/{{product.id}}">{{product.name}}</a></h1>
-        <p>{{product.description}}</p>
-        <p>{{product.buying_cost}}</p>
-        <p>{{product.sell_price}}</p>
-        <p>{{product.stock_count}}</p>
-        <p>{{product.type_of_product}}</p>
-        <p>{{product.supplier.name}}</p>
-        <p>{{product.mark_up()}}</p>
+        <p><b>Description: </b>{{product.description}}</p>
+        <p><b>Buying cost: £</b>{{product.buying_cost}}</p>
+        <p><b>Sell price: </b>£{{product.sell_price}}</p>
+        <p><b>Quantity in stock: </b>{{product.stock_count}}</p>
+        <p><b>Type of product: </b>{{product.type_of_product}}</p>
+        <p><b>Supplier: </b>{{product.supplier.name}}</p>
+        <p><b>Mark up: </b>£{{product.mark_up()}}</p>
         <p>{{product.show_stock()}}</p>
         
     </div>

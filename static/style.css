@@ -43,6 +43,22 @@ body{
   position:absolute;
 }
 
+.return{
+  border-radius: 25px;
+  background-color: rgb(129, 107, 150);
+  width:auto;
+  height:90px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left:30%;
+  margin-right:30%;
+  margin-bottom: 2%;
+}
+
+.return a{
+  color:ghostwhite;
+}
+
 .box{
     border-radius: 25px;
     background-color: white;
@@ -62,7 +78,7 @@ body{
 .dropdown {
     position:relative;
     z-index:2;
-    
+    margin-left:2%;
   }
 
 .dropbtn {

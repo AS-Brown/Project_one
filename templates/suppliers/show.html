@@ -4,7 +4,7 @@
 
     <div class="box">
         <h1>{{supplier.name}}</h1>
-        <p>{{supplier.location}}</p>
+        <p><b>Location: </b>{{supplier.location}}</p>
         {% if supplier.active == 0 %}
             <p>This supplier is no longer active and will not be supplying any new products.</p>
             {% endif %}
