@@ -10,6 +10,11 @@
         <label for="location">Supplier description: </label><br>
         <input type="text" id="location" name="location" value="{{ supplier.location }}" required><br>
 
+        <select id="active" name="active">
+        <option value=1>True</option>
+        <option value=0>False</option>
+        </select>
+
         <button type="submit">Update supplier</button>
     </form>
 </div>

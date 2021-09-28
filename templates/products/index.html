@@ -5,7 +5,7 @@
 <div id="contents">
 
 <div class="dropdown">
-    <button class="dropbtn">Filter by manufacturer</button>
+    <button class="dropbtn">Filter by supplier</button>
     <div class="dropdown-content">
     {% for supplier in suppliers %}
     <a href="/products/via/{{supplier.name}}">{{supplier.name}}</a>
@@ -13,17 +13,27 @@
     </div>
 </div>
 
+<div class="dropdown">
+    <button class="dropbtn">Filter by type of product</button>
+    <div class="dropdown-content">
+    <a href="/products/via/Ambient">Ambient</a>
+    <a href="/products/via/Chill">Chill</a>
+    <a href="/products/via/Alcohol">Alcohol</a>
+    </div>
+</div>
+
+
 {% for product in products %}
 
     <div class="box">
         <h1><a href="/products/{{product.id}}">{{product.name}}</a></h1>
-        <p>{{product.description}}</p>
-        <p>{{product.buying_cost}}</p>
-        <p>{{product.sell_price}}</p>
-        <p>{{product.stock_count}}</p>
-        <p>{{product.type_of_product}}</p>
-        <p>{{product.supplier.name}}</p>
-        <p>{{product.mark_up()}}</p>
+        <p>Description: {{product.description}}</p>
+        <p>Buying cost: £{{product.buying_cost}}</p>
+        <p>Sell price: £{{product.sell_price}}</p>
+        <p>Quantity in stock: {{product.stock_count}}</p>
+        <p>Type of product: {{product.type_of_product}}</p>
+        <p>Supplier: {{product.supplier.name}}</p>
+        <p>Mark up: £{{product.mark_up()}}</p>
         <p>{{product.show_stock()}}</p>
     </div>
 

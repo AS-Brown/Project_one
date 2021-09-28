@@ -10,8 +10,15 @@
         <label for="location">Supplier description: </label><br>
         <input type="text" id="location" name="location" placeholder="location" required><br>
 
+        <label for="active">Supplier active?: </label><br>
+        <select id="active" name="active">
+            <option value=1>True</option>
+            <option value=0>False</option>
+        </select>
+
         <button type="submit">Submit supplier</button>
     </form>
 </div>
 
 {% endblock %}
+

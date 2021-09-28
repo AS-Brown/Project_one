@@ -17,7 +17,8 @@ def new_supplier():
 def create_supplier():
     name = request.form['name']
     location = request.form['location']
-    supplier = Supplier(name, location)
+    active = request.form['active']
+    supplier = Supplier(name, location, active)
     supplier_repository.save_supplier(supplier)
     return redirect('/suppliers')
 
@@ -35,6 +36,7 @@ def edit_supplier(id):
 def update_supplier(id):
     name = request.form['name']
     location = request.form['location']
-    supplier = Supplier(name, location, id)
+    active = request.form['active']
+    supplier = Supplier(name, location, active, id)
     supplier_repository.update_supplier(supplier)
     return redirect('/suppliers')

@@ -58,9 +58,11 @@ body{
 /* HERE IS DROPDOWN START */
 
 .dropdown {
-    position: fixed;
-    display: inline-block;
-    margin-left: 69em;
+    position: relative;
+    display: flex;
+
+    margin-bottom: 10em;
+    float: right;
   }
 
 .dropbtn {
@@ -74,7 +76,7 @@ body{
   
 .dropdown-content {
     display: none;
-    position: absolute;
+    position: relative;
     background-color: #f9f9f9;
     min-width: 160px;
     filter: drop-shadow(0 0 0.75rem grey);
@@ -97,4 +99,3 @@ body{
 .dropdown:hover .dropbtn {
     background-color: darkblue;
   }
-/* HERE IS DROPDOWN FINISH */

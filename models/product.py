@@ -10,7 +10,7 @@ class Product:
         self.id = id
     
     def mark_up(self):
-        amount = self.sell_price - self.buying_cost
+        amount = round(self.sell_price - self.buying_cost, 2)
         return amount
 
     def show_stock(self):

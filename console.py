@@ -9,11 +9,11 @@ import repositories.supplier_repository as supplier_repository
 product_repository.delete_all_products()
 supplier_repository.delete_all_suppliers()
 
-supplier_1 = Supplier("BI_SMOLL", "Dundee")
+supplier_1 = Supplier("BI_SMOLL", "Dundee", 1)
 supplier_repository.save_supplier(supplier_1)
-supplier_2 = Supplier("DK_WODE", "Aberdeen")
+supplier_2 = Supplier("DK_WODE", "Aberdeen", 1)
 supplier_repository.save_supplier(supplier_2)
-supplier_3 = Supplier("GREENINGS", "Kilmarnock")
+supplier_3 = Supplier("GREENINGS", "Kilmarnock", 0)
 supplier_repository.save_supplier(supplier_3)
 
 product_1 = Product("IRN BRU", "2 Litre", 1.00, 2.00, 27, "Ambient", supplier_1)

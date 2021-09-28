@@ -9,10 +9,7 @@ product_blueprint = Blueprint("products", __name__)
 def products():
     products = product_repository.select_all_products()
     suppliers = supplier_repository.select_all_suppliers()
-    for product in products:
-        amount = []
-        amount.append(product.sell_price - product.buying_cost)
-    return render_template("/products/index.html", products = products, suppliers = suppliers, amount = amount)
+    return render_template("/products/index.html", products = products, suppliers = suppliers)
 
 @product_blueprint.route('/products/new', methods = ['GET'])
 def new_product():

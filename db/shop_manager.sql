@@ -4,7 +4,8 @@ DROP TABLE IF EXISTS suppliers;
 CREATE TABLE suppliers (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
-    location VARCHAR(255)
+    location VARCHAR(255),
+    active INT
 );
 
 CREATE TABLE products (

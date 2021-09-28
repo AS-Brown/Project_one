@@ -3,6 +3,7 @@
 {% block content %}
 
 {% for product in products %}
+
 {% if product.supplier.name == id %}
     <div class="box">
         <h1><a href="/products/{{product.id}}">{{product.name}}</a></h1>
@@ -12,11 +13,28 @@
         <p>{{product.stock_count}}</p>
         <p>{{product.type_of_product}}</p>
         <p>{{product.supplier.name}}</p>
-        <p>{% if product.stock_count == 0 %}
-            This product is out of stock
-        {% elif product.stock_count < 10 %}
-            This product is low in stock
-        {% endif %}</p>
+        <p>{{product.mark_up()}}</p>
+        <p>{{product.show_stock()}}</p>
+        
+    </div>
+{% endif %}
+
+{% endfor %} 
+
+{% for product in products %}
+
+{% if product.type_of_product == id %}
+    <div class="box">
+        <h1><a href="/products/{{product.id}}">{{product.name}}</a></h1>
+        <p>{{product.description}}</p>
+        <p>{{product.buying_cost}}</p>
+        <p>{{product.sell_price}}</p>
+        <p>{{product.stock_count}}</p>
+        <p>{{product.type_of_product}}</p>
+        <p>{{product.supplier.name}}</p>
+        <p>{{product.mark_up()}}</p>
+        <p>{{product.show_stock()}}</p>
+        
     </div>
 {% endif %}
 
