@@ -19,4 +19,4 @@ class Product:
         if self.stock_count < 10:
             return "This product is low in stock"
         else:
-            return ""
+            return "This product has a safe stock level"

@@ -96,6 +96,7 @@ body.supplier-background{
     margin-left:2%;
     flex-direction: column;
     padding-left: 10px;
+    padding-right:10px;
     filter: drop-shadow(0 0 0.75rem grey);
   }
 
@@ -130,6 +131,30 @@ body.supplier-background{
   font-family: 'Times New Roman', Times, serif; font-size: 20px; 
   text-align: center;
   }
+
+#container-headline {
+    text-align: center;
+}
+#container-headline > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#red{
+  font-family: 'Times New Roman', Times, serif; font-size: 20px; color:red;
+}
+
+#yellow{
+  font-family: 'Times New Roman', Times, serif; font-size: 20px; color:yellow;
+}
+
+#green{
+  font-family: 'Times New Roman', Times, serif; font-size: 20px; color:greenyellow;
+}
+
+#submit-width{
+  width:95%;
+}
 
 /* HERE IS DROPDOWN START */
 

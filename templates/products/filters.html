@@ -11,17 +11,35 @@
 {% for product in products %}
 
 {% if product.supplier.name == id %}
-    <div class="box">
-        <h1><a href="/products/{{product.id}}">{{product.name}}</a></h1>
-        <p><b>Description: </b>{{product.description}}</p>
-        <p><b>Buying cost: £</b>{{product.buying_cost}}</p>
-        <p><b>Sell price: </b>£{{product.sell_price}}</p>
-        <p><b>Quantity in stock: </b>{{product.stock_count}}</p>
-        <p><b>Type of product: </b>{{product.type_of_product}}</p>
-        <p><b>Supplier: </b>{{product.supplier.name}}</p>
-        <p><b>Mark up: </b>£{{product.mark_up()}}</p>
-        <p>{{product.show_stock()}}</p>        
+
+<div class="box">
+    <div id='container-headline'>
+        <div>
+            <h1><a href="/products/{{product.id}}">{{product.name}}</a></h1>
+        </div>
+        <div>
+            {% if product.stock_count == 0 %}
+            <p id="red">⬤</p>
+            {% endif %}
+            {% if product.stock_count > 0 and product.stock_count < 10 %}
+            <p id="yellow">⬤</p> 
+            {% endif %}
+            {% if product.stock_count > 9 %}
+            <p id="green">⬤</p> 
+            {% endif %}
+        </div>
     </div>
+    <p><b>Description: </b>{{product.description}}</p>
+    <p><b>Buying cost: £</b>{{product.buying_cost}}</p>
+    <p><b>Sell price: </b>£{{product.sell_price}}</p>
+    <p><b>Quantity in stock: </b>{{product.stock_count}}</p>
+    <p><b>{{product.show_stock()}}</p></b>
+    <p><b>Type of product: </b>{{product.type_of_product}}</p>
+    <p><b>Supplier: </b>{{product.supplier.name}}</p>
+    <p><b>Mark up: </b>£{{product.mark_up()}}</p>
+
+
+</div>
 {% endif %}
 
 {% endfor %} 
@@ -29,18 +47,35 @@
 {% for product in products %}
 
 {% if product.type_of_product == id %}
-    <div class="box">
-        <h1><a href="/products/{{product.id}}">{{product.name}}</a></h1>
-        <p><b>Description: </b>{{product.description}}</p>
-        <p><b>Buying cost: £</b>{{product.buying_cost}}</p>
-        <p><b>Sell price: </b>£{{product.sell_price}}</p>
-        <p><b>Quantity in stock: </b>{{product.stock_count}}</p>
-        <p><b>Type of product: </b>{{product.type_of_product}}</p>
-        <p><b>Supplier: </b>{{product.supplier.name}}</p>
-        <p><b>Mark up: </b>£{{product.mark_up()}}</p>
-        <p>{{product.show_stock()}}</p>
-        
+
+<div class="box">
+    <div id='container-headline'>
+        <div>
+            <h1><a href="/products/{{product.id}}">{{product.name}}</a></h1>
+        </div>
+        <div>
+            {% if product.stock_count == 0 %}
+            <p id="red">⬤</p>
+            {% endif %}
+            {% if product.stock_count > 0 and product.stock_count < 10 %}
+            <p id="yellow">⬤</p> 
+            {% endif %}
+            {% if product.stock_count > 9 %}
+            <p id="green">⬤</p> 
+            {% endif %}
+        </div>
     </div>
+    <p><b>Description: </b>{{product.description}}</p>
+    <p><b>Buying cost: £</b>{{product.buying_cost}}</p>
+    <p><b>Sell price: </b>£{{product.sell_price}}</p>
+    <p><b>Quantity in stock: </b>{{product.stock_count}}</p>
+    <p><b>{{product.show_stock()}}</p></b>
+    <p><b>Type of product: </b>{{product.type_of_product}}</p>
+    <p><b>Supplier: </b>{{product.supplier.name}}</p>
+    <p><b>Mark up: </b>£{{product.mark_up()}}</p>
+
+
+</div>
 {% endif %}
 
 {% endfor %}   
