@@ -1,6 +1,12 @@
 body{
     background-color:gainsboro;
 }
+body.product-background{
+  background-image: url(/static/images/SHOP_BACKGROUND.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+}
 
 #nav_bar{
     background-color: darkslateblue;
@@ -53,6 +59,7 @@ body{
   margin-left:30%;
   margin-right:30%;
   margin-bottom: 2%;
+  filter: drop-shadow(0 0 0.75rem grey);
 }
 
 .return a{
