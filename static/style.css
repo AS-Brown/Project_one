@@ -1,5 +1,9 @@
 body{
     background-color:gainsboro;
+    background-image: url(/static/images/Space.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
 }
 
 body.home-background{
@@ -104,6 +108,22 @@ body.supplier-background{
   line-height: 18px;
   margin-bottom: 2%;
   margin-left:25em;
+  flex-direction: column;
+  padding:50px;
+  filter: drop-shadow(0 0 0.75rem grey);
+  font-family: 'Times New Roman', Times, serif; font-size: 20px; 
+  text-align: center;
+  }
+
+.box3{
+  border-radius: 25px;
+  background-color: aliceblue;
+  width: auto;
+  height: auto;
+  display: flex;
+  line-height: 18px;
+  margin-bottom: 2%;
+  margin-left:3em;
   flex-direction: column;
   padding:50px;
   filter: drop-shadow(0 0 0.75rem grey);

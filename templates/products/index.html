@@ -2,21 +2,22 @@
 
 {% block content %}
 <body class="product-background">
+
 <div class="dropdown">
     <button class="dropbtn">Filter by supplier</button>
     <div class="dropdown-content">
-    {% for supplier in suppliers %}
-    <a href="/products/via/{{supplier.name}}">{{supplier.name}}</a>
-    {% endfor %}
+        {% for supplier in suppliers %}
+            <a href="/products/via/{{supplier.name}}">{{supplier.name}}</a>
+        {% endfor %}
     </div>
 </div>
 
 <div class="dropdown">
     <button class="dropbtn">Filter by type of product</button>
     <div class="dropdown-content">
-    <a href="/products/via/Ambient">Ambient</a>
-    <a href="/products/via/Chill">Chill</a>
-    <a href="/products/via/Alcohol">Alcohol</a>
+        <a href="/products/via/Ambient">Ambient</a>
+        <a href="/products/via/Chill">Chill</a>
+        <a href="/products/via/Alcohol">Alcohol</a>
     </div>
 </div>
 
