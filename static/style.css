@@ -34,17 +34,19 @@ body{
     margin: 0 auto;
   }
 
-#contents{
-    display: flex;
-    flex-wrap: wrap;
-    width: 80em;
-    margin: 0 auto;
-  }
+.width-of-products{
+  margin-top: 5em;
+  width:90em;
+  display:flex;
+  flex-wrap: wrap;
+  z-index: 1;
+  position:absolute;
+}
 
 .box{
     border-radius: 25px;
     background-color: white;
-    width: 20em;
+    width: 25em;
     height: auto;
     display: flex;
     line-height: 18px;
@@ -58,11 +60,9 @@ body{
 /* HERE IS DROPDOWN START */
 
 .dropdown {
-    position: relative;
-    display: flex;
-
-    margin-bottom: 10em;
-    float: right;
+    position:relative;
+    z-index:2;
+    
   }
 
 .dropbtn {
@@ -78,7 +78,7 @@ body{
     display: none;
     position: relative;
     background-color: #f9f9f9;
-    min-width: 160px;
+    min-width: 140px;
     filter: drop-shadow(0 0 0.75rem grey);
     z-index: 1;
   }

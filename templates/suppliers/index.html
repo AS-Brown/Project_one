@@ -6,6 +6,9 @@
     <div class="box">
         <h1><a href="/suppliers/{{supplier.id}}">{{supplier.name}}</a></h1>
         <p>{{supplier.location}}</p>
+        {% if supplier.active == 0 %}
+            <p>This supplier is no longer active and will not be supplying any new products.</p>
+            {% endif %}
     </div>
 
 {% endfor %}   
