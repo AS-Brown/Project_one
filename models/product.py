@@ -9,11 +9,11 @@ class Product:
         self.supplier = supplier
         self.id = id
     
-    def mark_up(self):
+    def mark_up(self): #This finds the markup of a Product and returns it
         amount = round(self.sell_price - self.buying_cost, 2)
         return amount
 
-    def show_stock(self):
+    def show_stock(self): #This returns a message depending on stock level
         if self.stock_count == 0:
             return "This product is out of stock"
         if self.stock_count < 10:

@@ -3,7 +3,7 @@ from models.product import Product
 import repositories.supplier_repository as supplier_repository 
 
 
-def save_product(product):
+def save_product(product): #This saves a product
     sql = "INSERT INTO products (name, description, buying_cost, sell_price, stock_count, type_of_product, supplier_id) VALUES (%s, %s, %s, %s, %s, %s, %s) RETURNING *"
     values = [product.name, product.description, product.buying_cost, product.sell_price, product.stock_count, product.type_of_product, product.supplier.id]
     results = run_sql(sql, values)
@@ -11,7 +11,7 @@ def save_product(product):
     product.id = id
     return product
 
-def select_all_products():
+def select_all_products(): #This selects all products
     products = []
     sql = "SELECT * FROM products"
     results = run_sql(sql)
@@ -22,7 +22,7 @@ def select_all_products():
         products.append(product)
     return products
 
-def select_product(id):
+def select_product(id): #This selects a product via their id
     product = None
     sql = "SELECT * FROM products WHERE id = %s"
     values = [id]
@@ -33,17 +33,17 @@ def select_product(id):
         product = Product(result['name'], result['description'], result['buying_cost'], result['sell_price'], result['stock_count'], result['type_of_product'], supplier, result['id'])
     return product
 
-def delete_all_products():
+def delete_all_products(): #This deletes all products
     sql = "DELETE FROM products"
     run_sql(sql)
 
-def delete_product(id):
+def delete_product(id): #This deletes a product via their id
     sql = "DELETE FROM products WHERE id = %s"
     values = [id]
     run_sql(sql, values)
 
-def update_product(product):
+def update_product(product): #This updates a product
     sql = "UPDATE products SET (name, description, buying_cost, sell_price, stock_count, type_of_product, supplier_id) = (%s, %s, %s, %s, %s, %s, %s) WHERE id = %s"
-    values = [product.name, product.description, product.buying_cost, product.sell_price, product.stock_count, product.type_of_product, product.supplier.id]
+    values = [product.name, product.description, product.buying_cost, product.sell_price, product.stock_count, product.type_of_product, product.supplier.id, product.id]
     run_sql(sql, values)
 

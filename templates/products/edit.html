@@ -25,7 +25,7 @@
         <input type="text" id="type_of_product" name="type_of_product" value="{{ product.type_of_product }}" required><br>
 
         <label for="supplier">Product supplier: </label><br>
-        <select id="supplier" name="supplier_id">
+        <select id="supplier_id" name="supplier_id">
             {% for supplier in suppliers  %}
                 {% if supplier.active == 1 %}
                 <option value="{{ supplier.id }}" {% if product.supplier.id == supplier.id %} selected="selected" {% endif %}>{{ supplier.name }}</option>
